@@ -12,18 +12,25 @@ module.exports = function (ox, oy) {
   function add (ox, oy) {
     val.x += ox
     val.y += oy
-    console.log('add called')
-    console.log(val.x, val.y)
   }
 
-  function distance (o) {
-    return 1
+  function addv (o) {
+    return add(o.val.x, o.val.y)
+  }
+
+  function distance (ox, oy) {
+    return Math.sqrt(Math.pow(ox - val.x, 2) + Math.pow(oy - val.y, 2))
+  }
+  function distancev (o) {
+    return distance(o.val.x, o.val.y)
   }
 
   return {
     val: val,
     set: set,
     add: add,
-    distance: distance
+    addv: addv,
+    distance: distance,
+    distancev: distancev
   }
 }

@@ -1,6 +1,9 @@
 # Debug Mode: faster & better art through tests - by Bill Automata
 > Using standard creative coding examples in popular frameworks Bill will explain how and why you should be testing your creative code. Tests actually prove the software powering your art actually does what you think it does. A small amount of modern software engineering best practices will help you spend more time creating and less time screaming at a black box.
 
+
+
+
 * tape
   * runtime tests
   * integration tests
