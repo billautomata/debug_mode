@@ -48,12 +48,6 @@ module.exports = function vector (ox, oy) {
     }
   }
 
-  /*
-
-  function clamp(x){}      // clamps the length of the vector to x
-
-  */
-
   return {
     val: val,
     set: set,
