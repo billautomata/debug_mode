@@ -18,6 +18,11 @@ module.exports = function vector (ox, oy) {
     return add(o.val.x, o.val.y)
   }
 
+  function mult(s){
+    val.x *= s
+    val.y *= s
+  }
+
   function distance (ox, oy) {
     return Math.sqrt(Math.pow(ox - val.x, 2) + Math.pow(oy - val.y, 2))
   }
