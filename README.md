@@ -29,6 +29,7 @@ if(result_of_test[0] === 'zom' && result_of_test[1] === 'lol'){
 ### what is the problem?
 * you can't know if your code works, this should bother you - doubly so if you are selling it
 * clicking around to confirm things doesn't prove anything, it's anecdotal at best and always a waste of time
+
 ### why should you spend time solving it?
 * this is about investing in your work
 * isolation - your code is running in isolated chunks that means it CAN do that
@@ -36,6 +37,7 @@ if(result_of_test[0] === 'zom' && result_of_test[1] === 'lol'){
 * reuse - isolated and well organized code ends up being reused, the most efficient building is the one already standing
 * trust - you can let someone who doesn't really know the whole codebase make changes, that person is often you
 * knowledge - tests go beyond testing functionality, they describe expected functionality for code
+
 ### how do you solve it
 * vector math operations need to be confirmed
   * bad - math is hard, use http://wolframalpha.com to confirm your test cases
