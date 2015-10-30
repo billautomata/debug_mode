@@ -25,7 +25,7 @@
     // split returns an array
     var string_to_test = 'zomglol'
 
-    var result_of_test = string_to_test.split('g')
+    var result_of_function = string_to_test.split('g')
 
     if(result_of_test[0] === 'zom' && result_of_test[1] === 'lol'){
       console.log('test passed!')
@@ -50,6 +50,24 @@
 
 ### how do you write tests
 * use `tape`
+    ```javascript
+    var test = require('tape')
+
+    test('String.split', function(t){
+      t.plan(5)
+      
+      var string_to_test = 'zomglol'
+      var result_of_function = string_to_test.split('g')
+      t.equals(result_of_function[0], 'zom the first element')
+      t.equals(result_of_function[1], 'lol the second element')
+      t.equals(result_of_function.length, 2, 'correct number of elements returned')
+
+      var another_to_test = 'portland'
+      var another_result = another_to_test.split('z') // shouldn't split
+      t.equals(another_result.length, 1, 'no split happens')
+      t.equals(another_result[0], 'portland')      
+    })
+    ```
 * vector math operations need to be confirmed
   * bad - math is hard, use http://wolframalpha.com to confirm your test cases
   * all the math operations need to be isolated to their own object that can now be shared, shared implementations mean that future optimizations bubble up
@@ -63,11 +81,9 @@
 * <img> load events
 
 ### misc notes
-* tape
-  * runtime tests
-  * integration tests
-
-* image processing
+* using tape, string split example
+* difference between runtime tests and integration tests
+* image processing tests
 
 ### anatomy of a basic particle system & emitter + vectors
 * emitter
