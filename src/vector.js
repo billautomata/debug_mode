@@ -18,7 +18,7 @@ module.exports = function vector (ox, oy) {
     return add(o.val.x, o.val.y)
   }
 
-  function mult(s){
+  function mult (s) {
     val.x *= s
     val.y *= s
   }
@@ -30,9 +30,26 @@ module.exports = function vector (ox, oy) {
     return distance(o.val.x, o.val.y)
   }
 
+  function normalize () {
+    var l = distance(0, 0)
+    if (l > 0 || l < 0) {
+      return mult(1.0 / l)
+    } else {
+      return
+    }
+  }
+
+  function clamp (v) {
+    if (distance(0, 0) > Math.abs(v)) {
+      normalize()
+      return mult(Math.abs(v))
+    } else {
+      return
+    }
+  }
+
   /*
 
-  function normalize(){}  // sets the length to 1
   function clamp(x){}      // clamps the length of the vector to x
 
   */
@@ -42,7 +59,10 @@ module.exports = function vector (ox, oy) {
     set: set,
     add: add,
     addv: addv,
+    clamp: clamp,
     distance: distance,
-    distancev: distancev
+    distancev: distancev,
+    normalize: normalize,
+    mult: mult
   }
 }

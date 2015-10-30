@@ -5,17 +5,18 @@
 
 ### slide ideas
 
-This is a talk about side-effects, good and bad.  Cause and effect, you do something and things happen.  Computers do billions of things a second.  When side-effects compound at this rate it becomes too difficult to resolve that relationship.  
+* This is a talk about side-effects, good and bad.
+* Computers do billions of things a second.  When side-effects compound at this rate it becomes too difficult to resolve that relationship.  
 
-Run your program and get a segmentation fault right away or a black screen a little too soon, could be anything.  It could be that thing you fixed last night, how did you fix that?  Then you go searching and poking and prodding at your code but as your project gets bigger this takes longer and longer.  How do you know you aren't doing damage while trying to fix this?  Once you have fixed your problem how do you know it stays fixed?  That part of your code worked just fine a minute ago, and now it is broken.  Some other system is causing a bad side-effect down the chain.  
+* Run your program and get a segmentation fault right away or a black screen a little too soon, could be anything.  It could be that thing you fixed last night, how did you fix that?  Then you go searching and poking and prodding at your code but as your project gets bigger this takes longer and longer.  
+* How do you know you aren't doing damage while trying to fix this?  Once you have fixed your problem how do you know it stays fixed?  That part of your code worked just fine a minute ago, and now it is broken.  Some other system is causing a bad side-effect down the chain.  
 
-Comments aren't enough.  If all the comments are in one place then they aren't next to the code.  If the comments are all over the code you can't actually read them.  Comments are terrible too.  Self-documenting code is great, but you still have to read it.
+What are your tools without tests.  `cout` statements printing the state at different times. Comments aren't enough.  If all the comments are in one place then they aren't next to the code.  If the comments are all over the code you can't actually read them.  Comments are generally terrible too.  Self-documenting code is great, but you still have to read it, comprehend it, and run it to know if it works correctly.
 
 Problems with the asset loader can look like problems with an asset renderer.  A black screen could be your shader code not loading from disk or you aren't initializing a uniform variable that the final color depends on being multiplied against - so it is all zero.
 
 There is a solution, it's called: tests.  Unit tests specifically.  What is a unit?  If we were testing the javascript `split()` function we would write a test that looks like:
 ```javascript
-
 // split returns an array
 var string_to_test = 'zomglol'
 
@@ -39,6 +40,7 @@ if(result_of_test[0] === 'zom' && result_of_test[1] === 'lol'){
 * reuse - isolated and well organized code ends up being reused, the most efficient building is the one already standing
 * trust - you can let someone who doesn't really know the whole codebase make changes, that person is often you
 * knowledge - tests go beyond testing functionality, they describe expected functionality for code
+* leveling up
 
 ### how do you solve it
 * vector math operations need to be confirmed
@@ -98,3 +100,7 @@ if(result_of_test[0] === 'zom' && result_of_test[1] === 'lol'){
 
 
 * instrumenting your code in this way lets you discover things you wouldn't think to build
+
+
+* revealing module pattern
+* test driven development
