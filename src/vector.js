@@ -25,6 +25,13 @@ module.exports = function (ox, oy) {
     return distance(o.val.x, o.val.y)
   }
 
+  /*
+
+  function normalize(){}  // sets the length to 1
+  function clamp(x){}      // clamps the length of the vector to x
+
+  */
+
   return {
     val: val,
     set: set,
