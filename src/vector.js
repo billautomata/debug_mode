@@ -1,4 +1,4 @@
-module.exports = function (ox, oy) {
+module.exports = function vector (ox, oy) {
   var val = { x: 0, y: 0 }
 
   function set (ox, oy) {

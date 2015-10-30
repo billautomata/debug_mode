@@ -1,4 +1,4 @@
-module.exports = function () {
+module.exports = function particle () {
   var vector = require('./vector.js')
 
   var pos
