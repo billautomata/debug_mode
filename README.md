@@ -55,7 +55,7 @@
 
     test('String.split', function(t){
       t.plan(5)
-      
+
       var string_to_test = 'zomglol'
       var result_of_function = string_to_test.split('g')
       t.equals(result_of_function[0], 'zom the first element')
@@ -127,3 +127,9 @@
 
 * revealing module pattern
 * test driven development
+
+
+
+
+* bug tests
+  * if the value you assign to an attr() is undefined, it fails silently attr('cx', undefined) never sets the attr() 'cx'

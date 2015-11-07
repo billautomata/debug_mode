@@ -10,6 +10,9 @@ module.exports = function vector (ox, oy) {
   }
 
   function add (ox, oy) {
+    if (typeof ox === 'object') {
+      return addv(ox)
+    }
     val.x += ox
     val.y += oy
   }
