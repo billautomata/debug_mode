@@ -5,12 +5,24 @@ module.exports = function world () {
   var svg
   var emitters
 
+  var params = {
+    size_x: 1024,
+    size_y: 128
+  }
+
   function init (worldname) {
     if (worldname === undefined) {
       worldname = 'default'
     }
     svg = d3.select('body').append('svg').attr('id', worldname)
+
+    svg.params = params
+
+    svg.attr('preserveAspectRatio', 'xMidYMid')
+    svg.attr('viewBox', '0 0 ' + params.size_x + ' ' + params.size_y)
+
     svg.style('background-color', 'blue')
+      .style('width', '100%')
 
     emitters = []
   }

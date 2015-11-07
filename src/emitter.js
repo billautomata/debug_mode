@@ -11,7 +11,7 @@ module.exports = function emitter (_svg) {
   function init () {
     host = particle()
 
-    host.set_position(Math.random() * 100, Math.random() * 20)
+    host.set_position(svg.params.size_x * 0.5, svg.params.size_y * 0.5)
 
     particles = []
 
