@@ -1,6 +1,6 @@
-module.exports = function particle () {
-  var vector = require('./vector.js')
+var vector = require('./vector.js')
 
+module.exports = function particle () {
   var pos
   var vel
   var age

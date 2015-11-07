@@ -9,7 +9,7 @@ module.exports = function (grunt) {
     //
     browserify: {
       main: {
-        src: './src/index.js',
+        src: './src/main.js',
         dest: './build/bundle.js',
         files: {
           './build/bundle.js': ['./src/*.js' ]
