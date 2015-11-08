@@ -8,7 +8,36 @@
 
 ### slides outline
 
-## part 1 - theory
+## part 1 - history
+Math suffers from philosophy.  There are schools of mathematicians: Euclidian, Platonist, Newtonian.  More recently, formalism, intiutionism, logicism.
+
+Thinking logically is just a style of thinking.  You can live your whole life never being logical and probably be just fine.  You can just try random things until they work and memorize the working solutions (formalism).  You can feel your way through situations and adjust your expectations for different outcomes, as the only thing that truly matters is how you react to and interpret the universe.
+
+This like all philosophies, they are born from the reaction of the discovery of a paradox.  An example of a paradox is a Russell Set.  
+
+https://en.wikipedia.org/wiki/Russell%27s_paradox
+
+A set is a collection of things.  All numbers between 1 and 2.  All cats.  A Russell set is a theoretical collection of every set in the universe.  Does the Russell set also contain a Russell set?  If you want to have a box with everything in the universe inside of it, you also have to place that box inside itself.  Things start breaking down when you try to more broadly apply principles of that paradoxical box to the general subset of problems.  
+
+A big goal of mathematicians is to find a general solution to a problem space. That is some huge leverage, to be able to confidently state laws of the universe without fear of a later discovery contradicting you. If you are encountering paradoxes all the time you lose faith in your philosophy.  There is no set of all sets.  You can't solve your problem with bad tools.
+
+https://en.wikipedia.org/wiki/Foundations_of_mathematics
+https://en.wikipedia.org/wiki/Foundations_of_mathematics#Foundational_crisis
+
+A proposed solution [Hilbert's Program](https://en.wikipedia.org/wiki/Hilbert%27s_program) asked mathematicians to prove a limited number of fundamental axioms.  To do this they had to create a language and a formal theory used to verify that language.  The language had fancy new features like:
+* variables
+* IF > THEN statements
+* true/false values
+* parenthesis
+* symbol strings
+
+All of this in 1900.   Bertrand Russell and Alfred Whitehead-North spent 187 pages of a [262 page book](https://en.wikipedia.org/wiki/Principia_Mathematica tried to prove fundamental axioms) proving that 1+1=2, just so that they could use that axiom in 3 other places across three volumes of similar proofs.  They did this so that everyone else who is working with their tools would know that their tools were sound.  You could be confident that when a paradox does appear you would be able to isolate it using this formal language, keeping the structure of your theories sound.
+
+I bring this up because I want you to think about your code as an implementation of a formal system that exists to prove that initial conditions will result in expected outcomes.  Bugs are the paradoxes of your code universe.  You tried to make a set of all sets and ran out of memory or got a literal stack overflow crash.
+
+What can be learned from a bunch of dead mathematicians?  If you care, you should identify and verify the foundations of your system.  If you verify your tools you can go on to build greater things with confidence, faster that you would have before.
+
+## part 2 - application
 
 * This is a talk about side-effects, good and bad.  It is also a talk about  leveling up.
 * Computers do billions of things a second.  When side-effects compound at this rate it becomes too difficult to resolve any cause > effect relationships.
@@ -34,8 +63,6 @@
     }
     ```
 
-## part 2 - applied
-
 ### what is the problem?
 * you can't know if your code works, this should bother you - doubly so if you are selling it
 * clicking around to confirm things doesn't prove anything, it's anecdotal at best and always a waste of time
@@ -46,7 +73,7 @@
 * reuse - isolated and well organized code ends up being reused, the most efficient building is the one already standing
 * trust - you can let someone who doesn't really know the whole codebase make changes, that person is often you
 * knowledge - tests go beyond testing functionality, they describe expected functionality for code in a way that comments cannot.  Comments can be silently incorrect, if the test is incorrect it fails.  Failing tests are loud.
-* leveling up - I get the question: how do I go from beginner > intermediate?  Writing tests
+* leveling up - I get the question: how do I go from beginner > intermediate?
 
 ### how do you write tests
 * use `tape`
@@ -125,11 +152,17 @@
 
 * instrumenting your code in this way lets you discover things you wouldn't think to build
 
+
 * revealing module pattern
 * test driven development
-
+* chart of time spent during development, writing code, designing code, rewriting code, hand testing code, hunting down bugs -
 
 
 
 * bug tests
   * if the value you assign to an attr() is undefined, it fails silently attr('cx', undefined) never sets the attr() 'cx'
+
+
+## part 3 - conclusion
+
+If you do the work to make sure your code is testable, you can expect the code to be correctly organized and highly extensible.  Good code is verifiable to work.  
