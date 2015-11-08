@@ -31,7 +31,7 @@ A proposed solution [Hilbert's Program](https://en.wikipedia.org/wiki/Hilbert%27
 * parenthesis
 * symbol strings
 
-All of this in 1900.   Bertrand Russell and Alfred Whitehead-North spent 187 pages of a [262 page book](https://en.wikipedia.org/wiki/Principia_Mathematica tried to prove fundamental axioms) proving that 1+1=2, just so that they could use that axiom in 3 other places across three volumes of similar proofs.  They did this so that everyone else who is working with their tools would know that their tools were sound.  You could be confident that when a paradox does appear you would be able to isolate it using this formal language, keeping the structure of your theories sound.
+All of this in 1900.   Bertrand Russell and Alfred Whitehead-North spent 187 pages of a [262 page book](https://en.wikipedia.org/wiki/Principia_Mathematica) proving that 1+1=2, just so that they could use that axiom in 3 other places across three volumes of similar proofs.  They did this so that everyone else who is working with their tools would know that their tools were sound.  You could be confident that when a paradox does appear you would be able to isolate it using this formal language, keeping the structure of your theories sound.
 
 I bring this up because I want you to think about your code as an implementation of a formal system that exists to prove that initial conditions will result in expected outcomes.  Bugs are the paradoxes of your code universe.  You tried to make a set of all sets and ran out of memory or got a literal stack overflow crash.
 
