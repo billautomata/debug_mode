@@ -21,7 +21,7 @@
 * There are schools of mathematicians: Euclidian, Platonist, Newtonian.  More recently schools of formalism, intiutionism, logicism formed.
 
 `slide 4`
-* Thinking logically is just one style of thinking.  
+* Thinking logically is just one style of thinking.  Math is not universal.  Your math is internally consistent when you follow the rules.
 * You can live your whole life never being logical and probably be just fine.  
 * You can just try random things until they work and memorize the working solutions (formalism).  You can feel your way through situations and adjust your expectations when you arrive at different outcomes.
 
@@ -33,7 +33,7 @@
 
 `slide 7`
 * most philosophies, at least mathematical ones, are created to act as a workaround
-* empiricism are concerned only with the material world as it is interpreted by the senses, anything that cannot be sensed is not covered by empiricism,
+* empiricism are concerned only with the material world as it is interpreted by the senses, anything that cannot be sensed is not covered by empiricism, and that catches a lot of paradoxes
 
 `slide 8`
 * philosophy is very handy for avoiding these paradoxes, what's an example of a paradox?
@@ -49,17 +49,24 @@
 * longs story short, it can't exist and that is problematic when you are actually trying to do real math problems where for example you are dealing with an empty set, a set of nothing.  But some operation in your proof requires that you have the complement of that set, the set of everything.  The paradox is now a part of your equation.  It's like getting infinity, or dividing by zero.  The matrix breaks and you wake up covered in goo.
 
 `slide 12`
+* A big goal of mathematicians is to find a general solution to a problem space. That is some huge leverage you have to be able to confidently state laws of the universe, without fear of being wrong later.  
+* If you can develop a way of thinking that addresses previously un-answered questions then that is important.  We remember people for that.  We put them on money for that.   
+* If you are encountering paradoxes all the time you lose faith in your philosophy.
+* There is no set of all sets.  You can't solve your problem with bad tools.
+* philosophy as a mechanism for finding answers to questions, it is also a way of constructing ideas so they are shielded from eventual paradoxes
 
-This like all philosophies, they are born from the reaction of the discovery of a paradox.  An example of a paradox is a Russell Set.  
+`slide 13`
+* the paradoxes pile up so much that a bunch of short dead dudes get together to solve the problem
 
-https://en.wikipedia.org/wiki/Russell%27s_paradox
+`slide 14-17`
+* jokes about age
+* the "set of everything" paradox we just looked at is named after Mr Russell.  
 
-A big goal of mathematicians is to find a general solution to a problem space. That is some huge leverage, to be able to confidently state laws of the universe without fear of a later discovery contradicting you. If you are encountering paradoxes all the time you lose faith in your philosophy.  There is no set of all sets.  You can't solve your problem with bad tools.
-
-https://en.wikipedia.org/wiki/Foundations_of_mathematics
+`slide 18`
+* A proposed solution [Hilbert's Program](https://en.wikipedia.org/wiki/Hilbert%27s_program) asked mathematicians to prove a limited number of fundamental axioms.  To do this they had to devise a language and a describe a theory of how to verify the language.
 
 `slide 19`
-* A proposed solution [Hilbert's Program](https://en.wikipedia.org/wiki/Hilbert%27s_program) asked mathematicians to prove a limited number of fundamental axioms.  To do this they had to create a language and a formal theory used to verify that language.  The language had just a small number of features:
+The language had just a small number of features:
   * variables
   * IF > THEN statements
   * true/false values
@@ -68,10 +75,13 @@ https://en.wikipedia.org/wiki/Foundations_of_mathematics
 
 `slide 20`
 * All of this in 1900.   Bertrand Russell and Alfred Whitehead-North spent 187 pages of a [262 page book](https://en.wikipedia.org/wiki/Principia_Mathematica) proving that 1+1=2, just so that they could use that axiom in 3 other places across three volumes of similar proofs.  They did this so that everyone else who is working with their tools would know that their tools were sound.  You could be confident that when a paradox does appear you would be able to isolate it using this formal language, keeping the structure of your theories sound.
+* I bring this up because I want you to think about your code as an implementation of a formal system that exists to prove that initial conditions will result in expected outcomes.  You expect the shiny things to happen when you start your program.  
+* Bugs are the paradoxes of your code universe.  You tried to make a set of all sets and ran out of memory or got a literal stack overflow crash.  Or your program never halted, or you can't tell if your program will ever halt.
+* If you try to add a number to something that isn't a number, you get Not a Number.  That's a mathematical paradox.  It ruins your equations like the introduction of infinity.
 
-I bring this up because I want you to think about your code as an implementation of a formal system that exists to prove that initial conditions will result in expected outcomes.  Bugs are the paradoxes of your code universe.  You tried to make a set of all sets and ran out of memory or got a literal stack overflow crash.
-
-What can be learned from a bunch of dead mathematicians?  If you care, you should identify and verify the foundations of your system.  If you verify your tools you can go on to build greater things with confidence, faster that you would have before.
+`slide 21`
+* What can be learned from a bunch of dead mathematicians?  If you care, you should identify and verify the foundations of your system.  If you verify your tools you can go on to build greater things with confidence, faster that you would have before.  
+* Note: this guy Godel.  He later proved every system contains paradoxical elements because all systems are self-referential, in that it breaks down at some point when trying to describe itself.  Take solace in the fact that no matter how hard you try you will reach the bedrock of your ideas.  At some point you can stop working because you literally can't anymore.
 
 ## part 2 - application
 
