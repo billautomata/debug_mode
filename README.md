@@ -9,29 +9,65 @@
 ### slides outline
 
 ## part 1 - history
-Math suffers from philosophy.  There are schools of mathematicians: Euclidian, Platonist, Newtonian.  More recently, formalism, intiutionism, logicism.
 
-Thinking logically is just a style of thinking.  You can live your whole life never being logical and probably be just fine.  You can just try random things until they work and memorize the working solutions (formalism).  You can feel your way through situations and adjust your expectations for different outcomes, as the only thing that truly matters is how you react to and interpret the universe.
+`slide 1`
+* intro
+
+`slide 2`
+* In the early 20th century math was undergoing a crisis[1](https://en.wikipedia.org/wiki/Foundations_of_mathematics#Foundational_crisis).  
+
+`slide 3`
+* Math suffers from philosophy.
+* There are schools of mathematicians: Euclidian, Platonist, Newtonian.  More recently schools of formalism, intiutionism, logicism formed.
+
+`slide 4`
+* Thinking logically is just one style of thinking.  
+* You can live your whole life never being logical and probably be just fine.  
+* You can just try random things until they work and memorize the working solutions (formalism).  You can feel your way through situations and adjust your expectations when you arrive at different outcomes.
+
+`slide 5`
+* The only thing that truly matters is how you react to and interpret the universe.  Things are flexible.  We decide, consciously to think a certain way because it has worked for us before, or we see it working for others.
+
+`slide 6`
+* what happens when it stops working?
+
+`slide 7`
+* most philosophies, at least mathematical ones, are created to act as a workaround
+* empiricism are concerned only with the material world as it is interpreted by the senses, anything that cannot be sensed is not covered by empiricism,
+
+`slide 8`
+* philosophy is very handy for avoiding these paradoxes, what's an example of a paradox?
+
+`slide 9`
+* in math they have these things called sets, you would call them arrays or collections
+
+`slide 10`
+* here is the paradox, the set of everything - literally everything in the universe.  If it exists it would contain itself.
+
+`slide 11`
+* do you see the paradox?  Not only is it a problem of infinity, it's a problem of an infinitely nested infinity...
+* longs story short, it can't exist and that is problematic when you are actually trying to do real math problems where for example you are dealing with an empty set, a set of nothing.  But some operation in your proof requires that you have the complement of that set, the set of everything.  The paradox is now a part of your equation.  It's like getting infinity, or dividing by zero.  The matrix breaks and you wake up covered in goo.
+
+`slide 12`
 
 This like all philosophies, they are born from the reaction of the discovery of a paradox.  An example of a paradox is a Russell Set.  
 
 https://en.wikipedia.org/wiki/Russell%27s_paradox
 
-A set is a collection of things.  All numbers between 1 and 2.  All cats.  A Russell set is a theoretical collection of every set in the universe.  Does the Russell set also contain a Russell set?  If you want to have a box with everything in the universe inside of it, you also have to place that box inside itself.  Things start breaking down when you try to more broadly apply principles of that paradoxical box to the general subset of problems.  
-
 A big goal of mathematicians is to find a general solution to a problem space. That is some huge leverage, to be able to confidently state laws of the universe without fear of a later discovery contradicting you. If you are encountering paradoxes all the time you lose faith in your philosophy.  There is no set of all sets.  You can't solve your problem with bad tools.
 
 https://en.wikipedia.org/wiki/Foundations_of_mathematics
-https://en.wikipedia.org/wiki/Foundations_of_mathematics#Foundational_crisis
 
-A proposed solution [Hilbert's Program](https://en.wikipedia.org/wiki/Hilbert%27s_program) asked mathematicians to prove a limited number of fundamental axioms.  To do this they had to create a language and a formal theory used to verify that language.  The language had fancy new features like:
-* variables
-* IF > THEN statements
-* true/false values
-* parenthesis
-* symbol strings
+`slide 19`
+* A proposed solution [Hilbert's Program](https://en.wikipedia.org/wiki/Hilbert%27s_program) asked mathematicians to prove a limited number of fundamental axioms.  To do this they had to create a language and a formal theory used to verify that language.  The language had just a small number of features:
+  * variables
+  * IF > THEN statements
+  * true/false values
+  * parenthesis
+  * symbol strings
 
-All of this in 1900.   Bertrand Russell and Alfred Whitehead-North spent 187 pages of a [262 page book](https://en.wikipedia.org/wiki/Principia_Mathematica) proving that 1+1=2, just so that they could use that axiom in 3 other places across three volumes of similar proofs.  They did this so that everyone else who is working with their tools would know that their tools were sound.  You could be confident that when a paradox does appear you would be able to isolate it using this formal language, keeping the structure of your theories sound.
+`slide 20`
+* All of this in 1900.   Bertrand Russell and Alfred Whitehead-North spent 187 pages of a [262 page book](https://en.wikipedia.org/wiki/Principia_Mathematica) proving that 1+1=2, just so that they could use that axiom in 3 other places across three volumes of similar proofs.  They did this so that everyone else who is working with their tools would know that their tools were sound.  You could be confident that when a paradox does appear you would be able to isolate it using this formal language, keeping the structure of your theories sound.
 
 I bring this up because I want you to think about your code as an implementation of a formal system that exists to prove that initial conditions will result in expected outcomes.  Bugs are the paradoxes of your code universe.  You tried to make a set of all sets and ran out of memory or got a literal stack overflow crash.
 
@@ -161,7 +197,8 @@ What can be learned from a bunch of dead mathematicians?  If you care, you shoul
 
 * bug tests
   * if the value you assign to an attr() is undefined, it fails silently attr('cx', undefined) never sets the attr() 'cx'
-
+  * floating point spec (0.2 + 0.1 === 0.3)
+  * array overflow errors
 
 ## part 3 - conclusion
 
