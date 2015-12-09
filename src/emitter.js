@@ -17,7 +17,7 @@ module.exports = function emitter (_svg) {
     particles = []
 
     params = {}
-    params.min_particles = 100
+    params.min_particles = 64
     params.max_particles = 200
 
     // add particles

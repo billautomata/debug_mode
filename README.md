@@ -17,7 +17,7 @@
 * In the early 20th century math was undergoing a crisis[1](https://en.wikipedia.org/wiki/Foundations_of_mathematics#Foundational_crisis).  
 
 `slide 3`
-* Math suffers from philosophy.
+* Math is a philosophy.  In fact one could say it suffers from philosophy.
 * There are schools of mathematicians: Euclidian, Platonist, Newtonian.  More recently schools of formalism, intiutionism, logicism formed.
 
 `slide 4`
@@ -53,10 +53,9 @@
 * If you can develop a way of thinking that addresses previously un-answered questions then that is important.  We remember people for that.  We put them on money for that.   
 * If you are encountering paradoxes all the time you lose faith in your philosophy.
 * There is no set of all sets.  You can't solve your problem with bad tools.
-* philosophy as a mechanism for finding answers to questions, it is also a way of constructing ideas so they are shielded from eventual paradoxes
 
 `slide 13`
-* the paradoxes pile up so much that a bunch of short dead dudes get together to solve the problem
+* in the early 20th century the paradoxes pile up so much that a bunch of short dead dudes get together to solve the problem
 
 `slide 14-17`
 * jokes about age
@@ -66,7 +65,7 @@
 * A proposed solution [Hilbert's Program](https://en.wikipedia.org/wiki/Hilbert%27s_program) asked mathematicians to prove a limited number of fundamental axioms.  To do this they had to devise a language and a describe a theory of how to verify the language.
 
 `slide 19`
-The language had just a small number of features:
+The language should look really familiar had just a small number of features:
   * variables
   * IF > THEN statements
   * true/false values
@@ -86,7 +85,7 @@ The language had just a small number of features:
 ## part 2 - side effects
 
 `slide 22`
-* This is a presentation about side-effects, good and bad.  It is also a talk about  leveling up.
+* This is a presentation about side-effects, good and bad.  It is also a talk about leveling up.
 * Computers do billions of things a second.  When side-effects compound at this rate it becomes too difficult to resolve any cause > effect relationships.
 
 `slide 23`
@@ -109,11 +108,19 @@ The language had just a small number of features:
 `slide 26`
 * beyond testing the outcome of function calls you can test for anything verifiable
 
-`slide 27` `slide 28`
+`slide 27`
 * after you write all the tests for the stuff you expect, you can then start writing the tests for all the unexpected shit that comes up
+
+`slide 28`
 * If you are building an image loader, you would test to see if the response from the server was a 200.  You could stop there but one time the server sent back a response with 200 but a length of zero, you tried to parse that empty result as an image and nothing loaded.
 
 `slide 29`
 * Instead of reading you a code heavy presentation I created moderately complex multiple emitter, single world, particle system project and will talk about the design and what I tested.
 
 `slide 30` - `slide 33`
+* explanations of each system being tested
+* I check for the presence of a bunch of functions and variables being present
+* check for the proper operation of the functions
+
+`slide 34`
+* This is a lot of information but remember Homer.  

@@ -10,6 +10,8 @@ function render () {
 render()
 
 // code itself
+// var color = 'rgba(0,0,255,0.1)'
+
 var emitter_a = world.create_emitter()
 emitter_a.set_color('red')
 emitter_a.add_force(gravity_maker(10, 1, -1))
@@ -21,6 +23,17 @@ emitter_b.set_color('green')
 emitter_b.add_force(linear_gravity_maker(1, 1, -1))
 emitter_b.add_force(noise(0.1))
 emitter_b.add_force(dampen(0.99))
+
+var emitter_c = world.create_emitter()
+emitter_c.set_color('blue')
+emitter_c.add_force(gravity_maker(10, 0.1, 1, 1))
+emitter_c.add_force(gravity_maker(1000, 10, -1, 100))
+emitter_c.add_force(noise(0.1))
+// emitter_c.add_force(dampen(1))
+
+// emitter_a.set_color(color)
+// emitter_b.set_color(color)
+// emitter_c.set_color(color)
 
 // different force functions
 var vector = require('./vector.js') // static methods will be used with calculating forces
