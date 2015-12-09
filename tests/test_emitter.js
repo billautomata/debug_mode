@@ -14,5 +14,5 @@ test('particles array populated', function (t) {
 
   var e = require('../src/emitter.js')()
 
-  t.equals(100, e.get_particles().length, 'check correct x value')
+  t.equals(100, e.get_particles().length, 'particles array valid')
 })
