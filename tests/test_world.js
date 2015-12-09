@@ -27,3 +27,5 @@ test('svg element added to page', function (t) {
   t.equals(d3.select('body').select('svg#test_id').size(), 1, 'one svg is created with the correct name')
   w.get_svg().remove() // cleanup
 })
+
+// emitters created

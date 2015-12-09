@@ -20,11 +20,14 @@ module.exports = function particle (_svg) {
   init()
 
   function create () {
-    circle = svg.append('circle').attr('cx', pos.val.x).attr('cy', pos.val.y).attr('r', 1)
+    circle = svg.append('circle').attr('cx', pos.val.x).attr('cy', pos.val.y).attr('r', 3)
   }
 
   function set_position (x, y) {
     pos.set(x, y)
+  }
+  function set_velocity (x, y) {
+    vel.set(x, y)
   }
 
   function tick () {
@@ -34,14 +37,18 @@ module.exports = function particle (_svg) {
   }
 
   function update_node () {
-    circle.attr('cx', pos.val.x).attr('cy', pos.val.y)
+    if (svg !== undefined) {
+      circle.attr('cx', pos.val.x).attr('cy', pos.val.y)
+    }
   }
 
   return {
     init: init,
     tick: tick,
     set_position: set_position,
+    set_velocity: set_velocity,
     get_position: function () { return pos },
+    get_velocity: function () { return vel },
     get_circle: function () { return circle }
   }
 }

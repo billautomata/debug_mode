@@ -6,8 +6,8 @@ module.exports = function world () {
   var emitters
 
   var params = {
-    size_x: 1024,
-    size_y: 128
+    size_x: 512,
+    size_y: 256
   }
 
   function init (worldname) {
@@ -21,14 +21,16 @@ module.exports = function world () {
     svg.attr('preserveAspectRatio', 'xMidYMid')
     svg.attr('viewBox', '0 0 ' + params.size_x + ' ' + params.size_y)
 
-    svg.style('background-color', 'blue')
+    svg.style('background-color', 'rgba(0,0,255,0.1)')
       .style('width', '100%')
 
     emitters = []
   }
 
-  function create_emitter () {
-    emitters.push(emitter(svg))
+  function create_emitter (force_fn) {
+    var e = emitter(svg)
+    emitters.push(e)
+    return e
   }
 
   function tick () {
