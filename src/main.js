@@ -1,4 +1,6 @@
-require('../tests/all_tests.js')
+var fs = require('fs')
+
+// require('../tests/all_tests.js')
 var world = require('./world.js')()
 
 world.init()
@@ -26,9 +28,9 @@ emitter_b.add_force(dampen(0.99))
 
 var emitter_c = world.create_emitter()
 emitter_c.set_color('blue')
-emitter_c.add_force(gravity_maker(10, 0.1, 1, 1))
-emitter_c.add_force(gravity_maker(1000, 10, -1, 100))
-emitter_c.add_force(noise(0.1))
+// emitter_c.add_force(gravity_maker(10, 0.1, 1, 1))
+// emitter_c.add_force(gravity_maker(1000, 10, -1, 100))
+emitter_c.add_force(static_noise(0.1))
 // emitter_c.add_force(dampen(1))
 
 // emitter_a.set_color(color)
@@ -100,6 +102,33 @@ function noise (amnt) {
 
     v.val.x += (Math.random() * noise_amount) - (noise_amount * 0.5)
     v.val.y += (Math.random() * noise_amount) - (noise_amount * 0.5)
+  }
+}
+
+var static_random = ring_buffer(1024)
+
+function static_noise (amnt) {
+  return function _noise (particle, host) {
+    var v = particle.get_velocity()
+    var noise_amount = amnt
+
+    v.val.x += (static_random() * noise_amount) - (noise_amount * 0.5)
+    v.val.y += (static_random() * noise_amount) - (noise_amount * 0.5)
+  }
+}
+
+function ring_buffer (len) {
+  var ring_buffer = JSON.parse(fs.readFileSync(__dirname + '/512.json', 'utf8'))
+  // for (var i = 0; i < n_elements; i++) {
+  //   ring_buffer.push(Math.random())
+  // }
+  var idx = 0
+  return function () {
+    idx += 1
+    if (idx >= ring_buffer.length) {
+      idx = 0
+    }
+    return ring_buffer[idx]
   }
 }
 
